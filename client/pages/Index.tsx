@@ -289,25 +289,17 @@ export default function Index() {
       </section>
 
       {/* ── INTERNATIONAL PUBLIC ACCOUNTING ──────────────────── */}
-      <section className="flex flex-col lg:flex-row min-h-[400px] bg-stone-100">
+      <section className="flex flex-col lg:flex-row min-h-[400px]">
         {/* Left: decorative image area */}
         <div
-          className="flex-1 min-h-[300px] lg:min-h-auto bg-stone-200"
+          className="flex-1 min-h-[300px] lg:min-h-auto"
           style={{
-            background:
-              "linear-gradient(to right, rgba(245,245,244,0.8) 0%, rgba(245,245,244,0) 100%), linear-gradient(135deg, #e7e5e4 0%, #d6d3d1 100%)",
+            backgroundImage: `linear-gradient(to right, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.3) 100%), url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&q=80')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
           }}
-        >
-          <div className="w-full h-full flex items-center justify-center min-h-[300px] relative overflow-hidden">
-            {/* Capitol-style architectural illustration */}
-            <div className="absolute inset-0 bg-gradient-to-br from-stone-200 via-stone-300 to-stone-400 opacity-60" />
-            <div className="relative z-10 text-stone-400 text-center">
-              <div className="w-32 h-32 mx-auto border-8 border-stone-400/40 rounded-full flex items-center justify-center">
-                <div className="w-16 h-16 border-4 border-stone-400/40 rounded-full" />
-              </div>
-            </div>
-          </div>
-        </div>
+        />
 
         {/* Right: text content */}
         <div className="flex-1 flex items-center justify-end">
