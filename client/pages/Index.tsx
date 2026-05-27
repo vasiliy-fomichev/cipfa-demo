@@ -1,24 +1,5 @@
 import { Link } from "react-router-dom";
-
-const SearchIcon = () => (
-  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path
-      d="M17.1263 9.33337C21.4434 9.33339 24.9182 12.8076 24.9183 17.1244C24.9183 18.8808 24.373 20.4914 23.432 21.7269L22.9027 22.4222L23.5209 23.0394L30.5531 30.0736C30.6422 30.1627 30.6663 30.249 30.6664 30.3138C30.6664 30.3782 30.643 30.4638 30.556 30.5521C30.4646 30.643 30.3784 30.6663 30.3148 30.6664C30.2499 30.6664 30.1631 30.6424 30.0746 30.5541L23.0404 23.5199L22.4359 22.9164L21.7455 23.4183C20.4224 24.3796 18.8693 24.9173 17.1254 24.9174C12.8083 24.9174 9.33355 21.4432 9.33337 17.1263C9.33337 12.8094 12.8091 9.33337 17.1263 9.33337ZM17.1263 10.0394C13.1921 10.0394 10.0394 13.1921 10.0394 17.1263C10.0396 21.0604 13.1922 24.2123 17.1263 24.2123C21.0592 24.2123 24.2131 21.0591 24.2133 17.1263C24.2133 13.1921 21.0606 10.0394 17.1263 10.0394Z"
-      fill="#FFFCFC"
-      stroke="white"
-      strokeWidth="2"
-    />
-  </svg>
-);
-
-const HamburgerIcon = () => (
-  <svg width="40" height="22" viewBox="0 0 40 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path
-      d="M24 21.6328H0V17.6992H24V21.6328ZM40 12.7832H0V8.84961H40V12.7832ZM28 3.93262H0V0H28V3.93262Z"
-      fill="white"
-    />
-  </svg>
-);
+import { SiteHeader } from "@/components/SiteHeader";
 
 const FacebookIcon = () => (
   <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -81,21 +62,25 @@ const YouTubeIcon = () => (
 const sectorCards = [
   {
     title: "Central Government",
+    path: "/sectors",
     image: "https://images.unsplash.com/photo-1590080876-51500a979f47?w=683&q=80",
     overlay: "linear-gradient(180deg, rgba(0,0,0,0) 45.87%, rgba(0,0,0,0.80) 81.34%), linear-gradient(0deg, rgba(227,194,255,0.8) 0%, rgba(227,194,255,0.8) 100%)",
   },
   {
     title: "Local Government",
+    path: "/sectors",
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=683&q=80",
     overlay: "linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.80) 83.47%), linear-gradient(0deg, rgba(102,255,204,0.4) 0%, rgba(102,255,204,0.4) 100%), linear-gradient(0deg, rgba(0,0,0,0.20) 0%, rgba(0,0,0,0.20) 100%)",
   },
   {
     title: "Police Financing",
+    path: "/sectors",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=683&q=80",
     overlay: "linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.80) 80.8%), linear-gradient(0deg, rgba(227,194,255,0.8) 0%, rgba(227,194,255,0.8) 100%), linear-gradient(0deg, rgba(0,0,0,0.20) 0%, rgba(0,0,0,0.20) 100%)",
   },
   {
     title: "Public Health",
+    path: "/sectors",
     image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=683&q=80",
     overlay: "linear-gradient(180deg, rgba(0,0,0,0) 47.47%, rgba(0,0,0,0.80) 81.6%), linear-gradient(0deg, rgba(102,255,204,0.5) 0%, rgba(102,255,204,0.5) 100%), linear-gradient(0deg, rgba(0,0,0,0.20) 0%, rgba(0,0,0,0.20) 100%)",
   },
@@ -107,6 +92,7 @@ const memberCards = [
     description:
       "People are an organisation's most important asset. However, the people challenges faced by public sector bodies are often more complex than in other types of organisations.",
     cta: "Start developing",
+    path: "/training",
     imageLeft: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&q=80",
     imageRight: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=80",
     gradLeft: "linear-gradient(135deg, rgba(64,55,118,0.6) 0%, rgba(49,44,98,0.6) 100%)",
@@ -117,6 +103,7 @@ const memberCards = [
     description:
       "Public services need to be delivered against the backdrop of an increasingly challenging macro-environment and with an increasing need for transparency and trust.",
     cta: "Start building",
+    path: "/services",
     imageLeft: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&q=80",
     imageRight: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&q=80",
     gradLeft: "linear-gradient(135deg, rgba(168,85,247,0.6) 0%, rgba(126,34,206,0.6) 100%)",
@@ -127,6 +114,7 @@ const memberCards = [
     description:
       "Public sector organisations globally need to tackle a myriad of challenges as they strive to increase their resilience and financial management.",
     cta: "Start increasing resilience",
+    path: "/services",
     imageLeft: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&q=80",
     imageRight: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&q=80",
     gradLeft: "linear-gradient(135deg, rgba(59,130,246,0.6) 0%, rgba(30,58,138,0.6) 100%)",
@@ -137,6 +125,7 @@ const memberCards = [
     description:
       "At CIPFA, we believe that improving public services is the key to improving the lives of people in their communities.",
     cta: "Start protecting",
+    path: "/about",
     imageLeft: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=500&q=80",
     imageRight: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=500&q=80",
     gradLeft: "linear-gradient(135deg, rgba(20,184,166,0.6) 0%, rgba(15,118,110,0.6) 100%)",
@@ -148,20 +137,42 @@ const newsItems = [
   {
     title: "What's driving financial risk across local government?",
     date: "February 12, 2026",
+    path: "/insights",
   },
   {
     title: "What will it take to deliver Social Care reform?",
     date: "January 26, 2026",
+    path: "/insights",
   },
   {
     title: "What the autumn budget means for the NHS?",
     date: "November 09, 2026",
+    path: "/insights",
   },
   {
     title: "Making prevention a financial reality",
     date: "October 18, 2026",
+    path: "/insights",
   },
 ];
+
+const footerLinkPaths: Record<string, string> = {
+  "About us": "/about",
+  "Our services": "/services",
+  "Contact us": "/contact",
+  "Press office": "/contact",
+  "Working for CIPFA": "/about",
+  "Why join?": "/membership",
+  Training: "/training",
+  "Continuing Professional Development (CPD)": "/training",
+  "Student Network": "/membership",
+  Regions: "/membership",
+  "Professional Accountancy Qualification (CIPFA PAQ)": "/training",
+  "CIPFA Education and Training Centre (CETC)": "/training",
+  Exemptions: "/training",
+  "Enroll on CETC courses": "/training",
+  "Study Options": "/training",
+};
 
 export default function Index() {
   return (
@@ -171,31 +182,7 @@ export default function Index() {
         {/* Hero background */}
         <div className="hero-bg min-h-[500px] md:min-h-[641px] w-full relative">
           {/* Header nav — overlaid absolutely */}
-          <header className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-6 md:px-[72px] h-[66px]">
-            {/* Logo */}
-            <Link to="/" className="flex items-center">
-              <span className="font-nunito font-black text-white text-2xl tracking-tight">
-                CIPFA
-                <span className="text-cipfa-green font-light">\</span>
-              </span>
-            </Link>
-
-            {/* Nav right */}
-            <div className="flex items-center gap-2 md:gap-0">
-              <button className="hidden md:flex p-2 text-white" aria-label="Search">
-                <SearchIcon />
-              </button>
-              <button className="hidden md:flex items-center px-6 py-3 text-white font-nunito font-bold text-sm uppercase tracking-wide hover:text-cipfa-green transition-colors">
-                Member Login
-              </button>
-              <button className="hidden md:flex items-center px-6 py-3 text-white font-nunito font-bold text-sm uppercase tracking-wide hover:text-cipfa-green transition-colors">
-                Join Us
-              </button>
-              <button className="flex items-center pr-0 md:pr-6" aria-label="Menu">
-                <HamburgerIcon />
-              </button>
-            </div>
-          </header>
+          <SiteHeader variant="hero" />
 
           {/* Hero content */}
           <div className="flex flex-col justify-center min-h-[500px] md:min-h-[641px] px-6 md:px-[72px] pt-[90px] pb-10">
@@ -208,9 +195,9 @@ export default function Index() {
                   The only organization dedicated to public financial management.
                 </p>
               </div>
-              <button className="bg-cipfa-green text-black font-mulish font-[800] text-sm uppercase tracking-wide px-10 py-[18px] hover:brightness-110 transition-all">
+              <Link to="/about" className="inline-flex bg-cipfa-green text-black font-mulish font-[800] text-sm uppercase tracking-wide px-10 py-[18px] hover:brightness-110 transition-all">
                 What We Stand For
-              </button>
+              </Link>
             </div>
 
             {/* Carousel dots */}
@@ -232,14 +219,14 @@ export default function Index() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
             {newsItems.map((item) => (
-              <div key={item.title} className="flex flex-col gap-4 cursor-pointer group">
+              <Link key={item.title} to={item.path} className="flex flex-col gap-4 cursor-pointer group">
                 <p className="text-white font-['Roboto_Serif'] font-normal text-lg leading-[140%] tracking-[-0.36px] group-hover:text-cipfa-green transition-colors">
                   {item.title}
                 </p>
                 <p className="text-cipfa-grey font-mulish font-medium text-sm tracking-[-0.28px]">
                   {item.date}
                 </p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -268,8 +255,9 @@ export default function Index() {
       >
         <div className="grid grid-cols-2 lg:grid-cols-4">
           {sectorCards.map((card) => (
-            <div
+            <Link
               key={card.title}
+              to={card.path}
               className="relative overflow-hidden cursor-pointer group"
               style={{
                 background: `${card.overlay}, url('${card.image}') lightgray center / cover no-repeat`,
@@ -283,7 +271,7 @@ export default function Index() {
                   How we help →
                 </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
@@ -316,9 +304,9 @@ export default function Index() {
                 <span className="font-[700]">We can help simplify this.</span>
               </p>
             </div>
-            <button className="self-start bg-cipfa-magenta text-white font-mulish font-[800] text-sm uppercase tracking-wide px-10 py-[18px] hover:brightness-110 transition-all">
+            <Link to="/services" className="self-start bg-cipfa-magenta text-white font-mulish font-[800] text-sm uppercase tracking-wide px-10 py-[18px] hover:brightness-110 transition-all">
               See What We Offer
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -346,9 +334,9 @@ export default function Index() {
               <p className="font-mulish font-[400] text-base leading-[140%] text-black">
                 {card.description}
               </p>
-              <a href="#" className="font-mulish font-[600] text-sm text-black hover:text-cipfa-purple transition-colors">
+              <Link to={card.path} className="font-mulish font-[600] text-sm text-black hover:text-cipfa-purple transition-colors">
                 {card.cta} →
-              </a>
+              </Link>
               {/* Diagonal split image area */}
               <div className="relative h-48 md:h-64 overflow-hidden mt-2 flex flex-row -mx-2">
                 <div
@@ -397,9 +385,9 @@ export default function Index() {
                   <ul className="flex flex-col gap-3">
                     {["About us", "Our services", "Contact us", "Press office", "Working for CIPFA"].map((item) => (
                       <li key={item}>
-                        <a href="#" className="font-mulish text-cipfa-grey text-sm hover:text-white transition-colors">
+                        <Link to={footerLinkPaths[item]} className="font-mulish text-cipfa-grey text-sm hover:text-white transition-colors">
                           {item}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -413,9 +401,9 @@ export default function Index() {
                   <ul className="flex flex-col gap-3">
                     {["Why join?", "Training", "Continuing Professional Development (CPD)", "Student Network", "Regions"].map((item) => (
                       <li key={item}>
-                        <a href="#" className="font-mulish text-cipfa-grey text-sm hover:text-white transition-colors">
+                        <Link to={footerLinkPaths[item]} className="font-mulish text-cipfa-grey text-sm hover:text-white transition-colors">
                           {item}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -435,9 +423,9 @@ export default function Index() {
                       "Study Options",
                     ].map((item) => (
                       <li key={item}>
-                        <a href="#" className="font-mulish text-cipfa-grey text-sm hover:text-white transition-colors">
+                        <Link to={footerLinkPaths[item]} className="font-mulish text-cipfa-grey text-sm hover:text-white transition-colors">
                           {item}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -446,11 +434,21 @@ export default function Index() {
 
               {/* Social icons */}
               <div className="flex items-center gap-4">
-                <FacebookIcon />
-                <InstagramIcon />
-                <XIcon />
-                <LinkedInIcon />
-                <YouTubeIcon />
+                <a href="https://www.facebook.com/CIPFA" target="_blank" rel="noreferrer" aria-label="CIPFA on Facebook">
+                  <FacebookIcon />
+                </a>
+                <a href="https://www.instagram.com/cipfa" target="_blank" rel="noreferrer" aria-label="CIPFA on Instagram">
+                  <InstagramIcon />
+                </a>
+                <a href="https://x.com/CIPFA" target="_blank" rel="noreferrer" aria-label="CIPFA on X">
+                  <XIcon />
+                </a>
+                <a href="https://www.linkedin.com/company/cipfa" target="_blank" rel="noreferrer" aria-label="CIPFA on LinkedIn">
+                  <LinkedInIcon />
+                </a>
+                <a href="https://www.youtube.com/user/CIPFA" target="_blank" rel="noreferrer" aria-label="CIPFA on YouTube">
+                  <YouTubeIcon />
+                </a>
               </div>
             </div>
           </div>
@@ -470,9 +468,9 @@ export default function Index() {
                   for the latest public finance trend analysis that affects your industry.
                 </span>
               </p>
-              <button className="self-start bg-cipfa-green text-black font-mulish font-[800] text-sm uppercase px-10 py-[18px] hover:brightness-110 transition-all mt-2">
+              <Link to="/insights" className="self-start bg-cipfa-green text-black font-mulish font-[800] text-sm uppercase px-10 py-[18px] hover:brightness-110 transition-all mt-2">
                 Sign Up
-              </button>
+              </Link>
             </div>
           </div>
         </div>
