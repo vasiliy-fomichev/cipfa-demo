@@ -130,11 +130,10 @@
   }
 
   .diagonal-left {
-    clip-path: polygon(0 0, 108% 0, 82% 100%, 0 100%);
+    clip-path: polygon(0 0, 115% 0, 85% 100%, 0 100%);
   }
 
   .diagonal-right {
-    clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%);
-    margin-left: -18%;
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
   }
 }

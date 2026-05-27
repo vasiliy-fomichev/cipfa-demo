@@ -107,32 +107,40 @@ const memberCards = [
     description:
       "People are an organisation's most important asset. However, the people challenges faced by public sector bodies are often more complex than in other types of organisations.",
     cta: "Start developing",
-    bgLeft: "from-cipfa-purple to-purple-900",
-    bgRight: "from-slate-700 to-slate-900",
+    imageLeft: "https://api.builder.io/api/v1/image/assets/TEMP/image1?width=500",
+    imageRight: "https://api.builder.io/api/v1/image/assets/TEMP/image2?width=500",
+    gradLeft: "linear-gradient(135deg, rgba(64,55,118,0.6) 0%, rgba(49,44,98,0.6) 100%)",
+    gradRight: "linear-gradient(135deg, rgba(68,68,68,0.6) 0%, rgba(40,40,40,0.6) 100%)",
   },
   {
     title: "Building Governance and Trust",
     description:
       "Public services need to be delivered against the backdrop of an increasingly challenging macro-environment and with an increasing need for transparency and trust.",
     cta: "Start building",
-    bgLeft: "from-amber-700 to-amber-900",
-    bgRight: "from-stone-600 to-stone-800",
+    imageLeft: "https://api.builder.io/api/v1/image/assets/TEMP/image3?width=500",
+    imageRight: "https://api.builder.io/api/v1/image/assets/TEMP/image4?width=500",
+    gradLeft: "linear-gradient(135deg, rgba(168,85,247,0.6) 0%, rgba(126,34,206,0.6) 100%)",
+    gradRight: "linear-gradient(135deg, rgba(120,113,108,0.6) 0%, rgba(78,76,76,0.6) 100%)",
   },
   {
     title: "Increasing Financial Resilience",
     description:
       "Public sector organisations globally need to tackle a myriad of challenges as they strive to increase their resilience and financial management.",
     cta: "Start increasing resilience",
-    bgLeft: "from-blue-800 to-blue-950",
-    bgRight: "from-slate-500 to-slate-700",
+    imageLeft: "https://api.builder.io/api/v1/image/assets/TEMP/image5?width=500",
+    imageRight: "https://api.builder.io/api/v1/image/assets/TEMP/image6?width=500",
+    gradLeft: "linear-gradient(135deg, rgba(59,130,246,0.6) 0%, rgba(30,58,138,0.6) 100%)",
+    gradRight: "linear-gradient(135deg, rgba(100,116,139,0.6) 0%, rgba(51,65,85,0.6) 100%)",
   },
   {
     title: "Protecting Place and Planet",
     description:
       "At CIPFA, we believe that improving public services is the key to improving the lives of people in their communities.",
     cta: "Start protecting",
-    bgLeft: "from-teal-700 to-teal-900",
-    bgRight: "from-sky-700 to-sky-900",
+    imageLeft: "https://api.builder.io/api/v1/image/assets/TEMP/image7?width=500",
+    imageRight: "https://api.builder.io/api/v1/image/assets/TEMP/image8?width=500",
+    gradLeft: "linear-gradient(135deg, rgba(20,184,166,0.6) 0%, rgba(15,118,110,0.6) 100%)",
+    gradRight: "linear-gradient(135deg, rgba(56,189,248,0.6) 0%, rgba(3,102,214,0.6) 100%)",
   },
 ];
 
@@ -350,12 +358,20 @@ export default function Index() {
                 {card.cta} →
               </a>
               {/* Diagonal split image area */}
-              <div className="relative h-52 overflow-hidden mt-2 flex">
+              <div className="relative h-48 md:h-64 overflow-hidden mt-2 flex flex-row -mx-2">
                 <div
-                  className={`diagonal-left flex-1 bg-gradient-to-br ${card.bgLeft} h-full`}
+                  className="diagonal-left flex-1 h-full"
+                  style={{
+                    background: `${card.gradLeft}, url('${card.imageLeft}') center / cover no-repeat`,
+                    backgroundBlendMode: 'overlay',
+                  }}
                 />
                 <div
-                  className={`diagonal-right flex-1 bg-gradient-to-br ${card.bgRight} h-full`}
+                  className="diagonal-right flex-1 h-full"
+                  style={{
+                    background: `${card.gradRight}, url('${card.imageRight}') center / cover no-repeat`,
+                    backgroundBlendMode: 'overlay',
+                  }}
                 />
               </div>
             </div>
