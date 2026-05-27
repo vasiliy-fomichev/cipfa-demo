@@ -1,5 +1,5 @@
 /** @import must precede all other statements */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Mulish:wght@200;300;400;500;600;700;800;900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900&family=Roboto+Serif:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -105,6 +105,7 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Mulish', -apple-system, sans-serif;
   }
 
   :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
@@ -116,5 +117,24 @@
   code {
     overflow-x: auto;
     white-space: pre;
+  }
+}
+
+@layer utilities {
+  .hero-bg {
+    background:
+      url('https://api.builder.io/api/v1/image/assets/TEMP/f9ce5c00cd04178063efd1383ce5f9bc892bc6f6?width=2732') lightgray 70px 354.222px / 104.832% 148.785% no-repeat,
+      linear-gradient(196deg, #403776 5.3%, rgba(64,55,118,0) 35.51%),
+      radial-gradient(173.44% 39.16% at 11.86% 48.36%, #403776 24.04%, rgba(64,55,118,0) 100%),
+      #312C62;
+  }
+
+  .diagonal-left {
+    clip-path: polygon(0 0, 108% 0, 82% 100%, 0 100%);
+  }
+
+  .diagonal-right {
+    clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%);
+    margin-left: -18%;
   }
 }

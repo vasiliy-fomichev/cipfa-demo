@@ -13,7 +13,21 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        mulish: ['Mulish', '-apple-system', 'sans-serif'],
+        nunito: ['"Nunito Sans"', '-apple-system', 'sans-serif'],
+        'roboto-serif': ['"Roboto Serif"', 'serif'],
+      },
       colors: {
+        cipfa: {
+          purple: '#403776',
+          'purple-dark': '#312C62',
+          dark: '#001424',
+          green: '#28FF99',
+          magenta: '#CC33FF',
+          grey: '#D9D9D9',
+          neutral: '#4D4D4D',
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
