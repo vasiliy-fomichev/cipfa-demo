@@ -122,12 +122,14 @@
 
 @layer utilities {
   .hero-bg {
-    background:
-      url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=2732&q=80') lightgray center / cover no-repeat,
-      linear-gradient(196deg, #403776 5.3%, rgba(64,55,118,0) 35.51%),
-      radial-gradient(173.44% 39.16% at 11.86% 48.36%, #403776 24.04%, rgba(64,55,118,0) 100%),
-      #312C62;
-    background-attachment: fixed;
+    background-image:
+      linear-gradient(196deg, rgba(64,55,118,0.7) 5.3%, rgba(64,55,118,0.3) 35.51%),
+      radial-gradient(173.44% 39.16% at 11.86% 48.36%, rgba(64,55,118,0.8) 24.04%, rgba(64,55,118,0.2) 100%),
+      url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=2732&q=80');
+    background-size: cover, cover, cover;
+    background-position: center, center, center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-color: #312C62;
   }
 
   .diagonal-left {
