@@ -277,21 +277,26 @@ export default function Index() {
       </section>
 
       {/* ── INTERNATIONAL PUBLIC ACCOUNTING ──────────────────── */}
-      <section className="flex flex-col lg:flex-row min-h-[400px]">
-        {/* Left: decorative image area */}
+      <section className="relative isolate min-h-[360px] overflow-hidden bg-[#f4f4f1]">
         <div
-          className="flex-1 min-h-[300px] lg:min-h-auto"
+          aria-hidden="true"
+          className="absolute inset-0 -z-20 opacity-80 grayscale"
           style={{
-            backgroundImage: `linear-gradient(to right, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.3) 100%), url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&q=80')`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
+            backgroundImage:
+              "url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Capitol_Building_Full_View.jpg/1920px-Capitol_Building_Full_View.jpg')",
+            backgroundPosition: "right center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "145% auto",
+            filter: "grayscale(1) contrast(0.82) brightness(1.22)",
           }}
         />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 -z-10 bg-gradient-to-r from-white/30 via-white/55 to-white/80"
+        />
 
-        {/* Right: text content */}
-        <div className="flex-1 flex items-center justify-end">
-          <div className="w-full max-w-[635px] flex flex-col gap-8 px-8 md:px-12 lg:px-16 py-16 lg:py-[100px]">
+        <div className="flex min-h-[360px] items-center px-6 py-16 md:px-[72px] lg:justify-end">
+          <div className="w-full max-w-[590px] flex flex-col gap-8">
             <div className="flex flex-col gap-6">
               <h2 className="font-mulish font-[200] text-cipfa-dark text-4xl md:text-[56px] leading-[110%]">
                 International public accounting
