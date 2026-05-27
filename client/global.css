@@ -123,10 +123,11 @@
 @layer utilities {
   .hero-bg {
     background:
-      url('https://api.builder.io/api/v1/image/assets/TEMP/f9ce5c00cd04178063efd1383ce5f9bc892bc6f6?width=2732') lightgray 70px 354.222px / 104.832% 148.785% no-repeat,
+      url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=2732&q=80') lightgray center / cover no-repeat,
       linear-gradient(196deg, #403776 5.3%, rgba(64,55,118,0) 35.51%),
       radial-gradient(173.44% 39.16% at 11.86% 48.36%, #403776 24.04%, rgba(64,55,118,0) 100%),
       #312C62;
+    background-attachment: fixed;
   }
 
   .diagonal-left {
