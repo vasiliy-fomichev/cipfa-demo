@@ -1,6 +1,7 @@
 import { FormEvent, useEffect, useRef, useState } from "react";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { ArrowRight, Menu, Search, X } from "lucide-react";
+import { CipfaLogo } from "@/components/CipfaLogo";
 import { primaryNavigation, utilityNavigation } from "@/lib/navigation";
 import { cn } from "@/lib/utils";
 
@@ -62,10 +63,7 @@ export function SiteHeader({ variant = "solid" }: SiteHeaderProps) {
         )}
       >
         <Link to="/" className="flex shrink-0 items-center" aria-label="CIPFA home">
-          <span className="font-nunito text-2xl font-black tracking-tight text-white">
-            CIPFA
-            <span className="font-light text-cipfa-green">\</span>
-          </span>
+          <CipfaLogo className="text-white" />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary navigation">
@@ -123,8 +121,8 @@ export function SiteHeader({ variant = "solid" }: SiteHeaderProps) {
       {menuOpen && (
         <div className="fixed inset-0 z-40 bg-cipfa-dark text-white" role="dialog" aria-modal="true" aria-label="Site navigation">
           <div className="flex h-[72px] items-center justify-between border-b border-white/10 px-6 md:px-[72px]">
-            <Link to="/" className="font-nunito text-2xl font-black tracking-tight">
-              CIPFA<span className="font-light text-cipfa-green">\</span>
+            <Link to="/" className="flex items-center" aria-label="CIPFA home">
+              <CipfaLogo className="text-white" />
             </Link>
             <button
               type="button"
