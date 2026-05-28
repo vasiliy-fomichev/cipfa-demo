@@ -59,30 +59,41 @@ const YouTubeIcon = () => (
   </svg>
 );
 
-const sectorCards = [
+const audienceCards = [
   {
-    title: "Central Government",
-    path: "/sectors",
-    image: "https://images.unsplash.com/photo-1590080876-51500a979f47?w=683&q=80",
-    overlay: "linear-gradient(180deg, rgba(0,0,0,0) 45.87%, rgba(0,0,0,0.80) 81.34%), linear-gradient(0deg, rgba(227,194,255,0.8) 0%, rgba(227,194,255,0.8) 100%)",
+    title: "Public Service Institutes",
+    path: "/services",
+    image: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=800&q=80",
+    overlay:
+      "linear-gradient(180deg, rgba(0,0,0,0) 42%, rgba(0,0,0,0.82) 82%), linear-gradient(0deg, rgba(227,194,255,0.78) 0%, rgba(227,194,255,0.78) 100%)",
   },
   {
-    title: "Local Government",
-    path: "/sectors",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=683&q=80",
-    overlay: "linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.80) 83.47%), linear-gradient(0deg, rgba(102,255,204,0.4) 0%, rgba(102,255,204,0.4) 100%), linear-gradient(0deg, rgba(0,0,0,0.20) 0%, rgba(0,0,0,0.20) 100%)",
+    title: "CIPFA Members & Students",
+    path: "/membership",
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80",
+    overlay:
+      "linear-gradient(180deg, rgba(0,0,0,0) 48%, rgba(0,0,0,0.84) 84%), linear-gradient(0deg, rgba(102,255,204,0.42) 0%, rgba(102,255,204,0.42) 100%), linear-gradient(0deg, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.18) 100%)",
   },
   {
-    title: "Police Financing",
-    path: "/sectors",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=683&q=80",
-    overlay: "linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.80) 80.8%), linear-gradient(0deg, rgba(227,194,255,0.8) 0%, rgba(227,194,255,0.8) 100%), linear-gradient(0deg, rgba(0,0,0,0.20) 0%, rgba(0,0,0,0.20) 100%)",
+    title: "Public Finance Professionals",
+    path: "/training",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80",
+    overlay:
+      "linear-gradient(180deg, rgba(0,0,0,0) 48%, rgba(0,0,0,0.82) 82%), linear-gradient(0deg, rgba(227,194,255,0.72) 0%, rgba(227,194,255,0.72) 100%), linear-gradient(0deg, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.18) 100%)",
   },
   {
-    title: "Public Health",
+    title: "Major Accountancy Firms",
+    path: "/services",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
+    overlay:
+      "linear-gradient(180deg, rgba(0,0,0,0) 46%, rgba(0,0,0,0.84) 84%), linear-gradient(0deg, rgba(102,255,204,0.38) 0%, rgba(102,255,204,0.38) 100%), linear-gradient(0deg, rgba(0,0,0,0.20) 0%, rgba(0,0,0,0.20) 100%)",
+  },
+  {
+    title: "National Audit Agencies",
     path: "/sectors",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=683&q=80",
-    overlay: "linear-gradient(180deg, rgba(0,0,0,0) 47.47%, rgba(0,0,0,0.80) 81.6%), linear-gradient(0deg, rgba(102,255,204,0.5) 0%, rgba(102,255,204,0.5) 100%), linear-gradient(0deg, rgba(0,0,0,0.20) 0%, rgba(0,0,0,0.20) 100%)",
+    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80",
+    overlay:
+      "linear-gradient(180deg, rgba(0,0,0,0) 46%, rgba(0,0,0,0.84) 84%), linear-gradient(0deg, rgba(227,194,255,0.68) 0%, rgba(227,194,255,0.68) 100%), linear-gradient(0deg, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.18) 100%)",
   },
 ];
 
@@ -253,8 +264,8 @@ export default function Index() {
           background: `url('https://images.unsplash.com/photo-1557821552-17105176677c?w=2732&q=80') lightgray center / cover no-repeat, #FFF`,
         }}
       >
-        <div className="grid grid-cols-2 lg:grid-cols-4">
-          {sectorCards.map((card) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
+          {audienceCards.map((card) => (
             <Link
               key={card.title}
               to={card.path}
@@ -263,8 +274,8 @@ export default function Index() {
                 background: `${card.overlay}, url('${card.image}') lightgray center / cover no-repeat`,
               }}
             >
-              <div className="flex flex-col justify-end h-[280px] md:h-[375px] p-8 md:p-12 gap-4">
-                <h3 className="text-white font-mulish font-[800] text-2xl md:text-[28px] leading-[120%] tracking-[-0.56px] drop-shadow-[0_2px_2px_rgba(0,0,0,0.75)]">
+              <div className="flex flex-col justify-end h-[260px] md:h-[360px] p-8 lg:p-6 xl:p-8 gap-4">
+                <h3 className="text-white font-mulish font-[800] text-2xl lg:text-[25px] xl:text-[28px] leading-[120%] tracking-[-0.56px] drop-shadow-[0_2px_2px_rgba(0,0,0,0.75)]">
                   {card.title}
                 </h3>
                 <p className="text-cipfa-grey font-mulish font-[600] text-sm md:text-base leading-[120%] tracking-[-0.32px] group-hover:text-cipfa-green transition-colors">
