@@ -82,7 +82,7 @@ const audienceCards = [
       "linear-gradient(180deg, rgba(0,0,0,0) 48%, rgba(0,0,0,0.82) 82%), linear-gradient(0deg, rgba(227,194,255,0.72) 0%, rgba(227,194,255,0.72) 100%), linear-gradient(0deg, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.18) 100%)",
   },
   {
-    title: "Major Accountancy Firms",
+    title: "Accountancy Firms",
     path: "/services",
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
     overlay:

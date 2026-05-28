@@ -97,16 +97,16 @@ export function SiteHeader({ variant = "solid" }: SiteHeaderProps) {
           </button>
 
           <Link
+            to="/join"
+            className="hidden px-4 py-3 font-nunito text-sm font-bold uppercase tracking-wide text-white transition-colors hover:text-cipfa-green md:flex"
+          >
+            Join Now
+          </Link>
+          <Link
             to="/login"
             className="hidden px-4 py-3 font-nunito text-sm font-bold uppercase tracking-wide text-white transition-colors hover:text-cipfa-green md:flex"
           >
             Member Login
-          </Link>
-          <Link
-            to="/join"
-            className="hidden bg-cipfa-green px-5 py-3 font-nunito text-sm font-black uppercase tracking-wide text-black transition hover:brightness-110 md:flex"
-          >
-            Join Us
           </Link>
           <button
             type="button"
