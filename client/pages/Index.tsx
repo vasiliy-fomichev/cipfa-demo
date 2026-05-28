@@ -354,7 +354,7 @@ export default function Index() {
                 {card.cta} →
               </Link>
               {/* Diagonal split image area */}
-              <div className="relative h-48 md:h-64 overflow-hidden mt-2 flex flex-row -mx-2">
+              <div className="relative h-48 md:h-64 overflow-hidden mt-auto flex flex-row -mx-2">
                 <div
                   className="diagonal-left flex-1 h-full"
                   style={{
